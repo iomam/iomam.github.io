@@ -2,12 +2,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-<script async src="https://api.beta.glia.com/salemove_integration.js"></script>  </head>
-<body style="background-color:pink;">>
+<script async src="https://api.beta.glia.com/salemove_integration.js"></script>
+    <script src=“test.js”></script>
+  </head>
+<body style="background-color:pink;">
 
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
-    
+<div>
+  <div class="instructions"></div>
+  <button class="cancel">Leave queue</button>
+  <div class="queue" queue_name="Sales">
+    <span> Interested in buying? </span>
+    <button class="media_button" medium="text">Chat using your browser</button>
+    <button class="media_button" medium="audio">
+      Speak using your computer microphone
+    </button>
+    <button class="media_button" medium="phone">Speak using your phone</button>
+    <button class="media_button" medium="video">
+      Speak using your computer camera and microphone
+    </button>
+  </div>
+  <div class="queue" queue_name="Service">
+    <span> Need help with the product? </span>
+    <button class="media_button" medium="text">Chat using your browser</button>
+    <button class="media_button" medium="audio">
+      Speak using your computer microphone
+    </button>
+    <button class="media_button" medium="phone">Speak using your phone</button>
+    <button class="media_button" medium="video">
+      Speak using your computer camera and microphone
+    </button>
+  </div>
+</div>    
     <br>
     
  <br>

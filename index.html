@@ -42,22 +42,22 @@ function getButtonMedium(button) {
 // Replace these functions with functions that fit your user interface.
 
 function hide(element) {
-  element.style.display = 'none';
+  //element.style.display = 'none';
 }
 
 function show(element) {
-  element.style.display = 'block';
+  //element.style.display = 'block';
 }
 
 function showCanQueue(queueElement, queueMedias) {
   // Queue is open, a set of medias available
-  queueElement.style['text-decoration'] = 'none';
+  //queueElement.style['text-decoration'] = 'none';
   updateQueueAvailableMedia(queueElement, queueMedias);
 }
 
 function showCannotQueue(queueElement) {
   // Queue is closed
-  queueElement.style['text-decoration'] = 'line-through';
+  //queueElement.style['text-decoration'] = 'line-through';
   updateQueueAvailableMedia(queueElement, []); // Disables all media buttons
 }
 

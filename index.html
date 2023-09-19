@@ -198,7 +198,7 @@ hide(findCancelButton());
 
 // Get Glia SDK and bind listeners.
 sm.getApi({version: 'v1'}).then(function(salemove) {
-  console.log("gliastarted")
+  console.log("gliastarted");
   salemove.addEventListener(
     salemove.EVENTS.QUEUE_STATE_UPDATE,
     onVisitorQueueingState
@@ -206,7 +206,7 @@ sm.getApi({version: 'v1'}).then(function(salemove) {
   listenForCancel();
 
   salemove.getQueues().then(function(queues) {
-      console.log("gliagetqueues")
+      console.log("gliagetqueues");
     listenForQueueButtonClicks(salemove, queues);
 
     var queueIds = queues.map(function(queue) {

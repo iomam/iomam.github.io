@@ -72,16 +72,16 @@ function showFailedToQueueView(error) {
 
 function showCanQueueView() {
   findQueuingInstructionsElement().innerHTML =
-    ‘Please select a queue and click a media button’;
+    'Please select a queue and click a media button';
 }
 
 function showAlreadyQueuedView() {
   findQueuingInstructionsElement().innerText =
-    ‘Please wait, you will be connected shortly’;
+    'Please wait, you will be connected shortly';
 }
 
 function showCannotQueueView() {
-  findQueuingInstructionsElement().innerText = ‘Queueing is currently disabled’;
+  findQueuingInstructionsElement().innerText = 'Queueing is currently disabled';
 }
 
 function updateQueueAvailableMedia(queueElement, medias) {
@@ -122,7 +122,7 @@ function listenForQueueButtonClicks(salemove, queues) {
       if (buttonMedium === ‘phone’) {
         // Read the visitor’s phone number from a separate UI element or from
         // another information source.
-        var visitorPhoneNumber = ‘+11111111111’;
+        var visitorPhoneNumber = '+11111111111';
         salemove
           .queueForEngagement(buttonMedium, {
             queueId: queueId,
@@ -175,7 +175,7 @@ function onVisitorQueueingState(queuingState) {
     show(findCancelButton());
     showAlreadyQueuedView();
   } else if (queuingState.state === queuingState.QUEUE_STATES.CANNOT_QUEUE) {
-    // Disable queueing when queueing state changed to `CANNOT_QUEUE`
+    // Disable queueing when queueing state changed to 'CANNOT_QUEUE'
     // which can happen due do various reasons.
     // See the full list of possible transition reasons in our JS SDK
     // https://sdk-docs.glia.com/visitor-js-api/current/class/AggregateQueueState.html#TRANSITION_REASONS-variable
@@ -197,8 +197,8 @@ showCannotQueueAnywhere();
 hide(findCancelButton());
 
 // Get Glia SDK and bind listeners.
-sm.getApi({version: ‘v1’}).then(function(salemove) {
-  console.log(“gliastarted”);
+sm.getApi({version: 'v1'}).then(function(salemove) {
+  console.log("gliastarted");
   salemove.addEventListener(
     salemove.EVENTS.QUEUE_STATE_UPDATE,
     onVisitorQueueingState
@@ -206,7 +206,7 @@ sm.getApi({version: ‘v1’}).then(function(salemove) {
   listenForCancel();
 
   salemove.getQueues().then(function(queues) {
-      console.log(“gliagetqueues”);
+      console.log("gliagetqueues");
     listenForQueueButtonClicks(salemove, queues);
 
     var queueIds = queues.map(function(queue) {

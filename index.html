@@ -112,14 +112,14 @@ function listenForQueueButtonClicks(salemove, queues) {
 
     if (queueId === undefined) {
       throw new Error(
-        ‘Queue button present, but queue not defined in Glia. Queue name: ’ +
+        'Queue button present, but queue not defined in Glia. Queue name: ' +
           buttonQueueName
       );
     }
 
     // Queue upon button click
-    mediaButton.addEventListener(‘click’, function() {
-      if (buttonMedium === ‘phone’) {
+    mediaButton.addEventListener('click', function() {
+      if (buttonMedium === 'phone') {
         // Read the visitor’s phone number from a separate UI element or from
         // another information source.
         var visitorPhoneNumber = '+11111111111';
@@ -140,11 +140,11 @@ function listenForQueueButtonClicks(salemove, queues) {
 
 // Bind click on cancel button with QueueTicket cancellation
 function listenForCancel() {
-  findCancelButton().addEventListener(‘click’, function() {
+  findCancelButton().addEventListener('click', function() {
     if (queueTicket) {
       queueTicket.cancel();
     } else {
-      throw new Error(‘Cannot cancel queuing while not queued’);
+      throw new Error('Cannot cancel queuing while not queued');
     }
   });
 }

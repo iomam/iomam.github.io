@@ -19,9 +19,7 @@
     function getMediaButtonQueueName(button) { return button.parentElement.getAttribute('queue_name') }
     
     function getButtonMedium(button) { return button.getAttribute('medium') }
-    
-    function hide(element) { element.style.display = 'none' }
-    
+        
     function show(element) { element.style.display = 'block' }
     
     function showCanQueue(queueElement, queueMedias) {
@@ -211,7 +209,6 @@
         }
     }
     showCannotQueueAnywhere();
-    hide(findCancelButton());
     
     function checkGliaAvailable() {
         gliaAttemptCount++;

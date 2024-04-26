@@ -251,11 +251,11 @@ sm.getApi({version: 'v1'}).then(function(salemove) {
     </button>
     <button class="cancel">Leave queue</button>
     // The button to show Visitor Code
-<button class="omnibrowse-code-button">Get CoBrowsing code</button>;
-function showVisitorCode() {
-  var code = document.createElement('sm-visitor-code');
-  document.body.appendChild(code);
-}
+<button
+  class="omnibrowse-code-button"
+  onclick="document.body.appendChild(document.createElement('sm-visitor-code'))">
+  Get CoBrowsing code
+</button>
   </div>
 
 </body>
